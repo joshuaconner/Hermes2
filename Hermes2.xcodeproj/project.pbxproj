@@ -1,0 +1,459 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		86FC493F14FD8CA90079C921 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86FC493E14FD8CA90079C921 /* UIKit.framework */; };
+		86FC494114FD8CA90079C921 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86FC494014FD8CA90079C921 /* Foundation.framework */; };
+		86FC494314FD8CA90079C921 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86FC494214FD8CA90079C921 /* CoreGraphics.framework */; };
+		86FC494914FD8CA90079C921 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 86FC494714FD8CA90079C921 /* InfoPlist.strings */; };
+		86FC494B14FD8CA90079C921 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 86FC494A14FD8CA90079C921 /* main.m */; };
+		86FC494F14FD8CA90079C921 /* HermesAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 86FC494E14FD8CA90079C921 /* HermesAppDelegate.m */; };
+		86FC495214FD8CA90079C921 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86FC495014FD8CA90079C921 /* MainStoryboard_iPhone.storyboard */; };
+		86FC495514FD8CA90079C921 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86FC495314FD8CA90079C921 /* MainStoryboard_iPad.storyboard */; };
+		86FC495814FD8CA90079C921 /* HermesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86FC495714FD8CA90079C921 /* HermesViewController.m */; };
+		86FC496014FD8CA90079C921 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86FC495F14FD8CA90079C921 /* SenTestingKit.framework */; };
+		86FC496114FD8CA90079C921 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86FC493E14FD8CA90079C921 /* UIKit.framework */; };
+		86FC496214FD8CA90079C921 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86FC494014FD8CA90079C921 /* Foundation.framework */; };
+		86FC496A14FD8CA90079C921 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 86FC496814FD8CA90079C921 /* InfoPlist.strings */; };
+		86FC496D14FD8CA90079C921 /* Hermes2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 86FC496C14FD8CA90079C921 /* Hermes2Tests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		86FC496314FD8CA90079C921 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 86FC493114FD8CA90079C921 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 86FC493914FD8CA90079C921;
+			remoteInfo = Hermes2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		86FC493A14FD8CA90079C921 /* Hermes2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hermes2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		86FC493E14FD8CA90079C921 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		86FC494014FD8CA90079C921 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		86FC494214FD8CA90079C921 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		86FC494614FD8CA90079C921 /* Hermes2-Info.plist */ = {isa = PBXFileReference; path = "Hermes2-Info.plist"; sourceTree = "<group>"; };
+		86FC494814FD8CA90079C921 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		86FC494A14FD8CA90079C921 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		86FC494C14FD8CA90079C921 /* Hermes2-Prefix.pch */ = {isa = PBXFileReference; path = "Hermes2-Prefix.pch"; sourceTree = "<group>"; };
+		86FC494D14FD8CA90079C921 /* HermesAppDelegate.h */ = {isa = PBXFileReference; path = HermesAppDelegate.h; sourceTree = "<group>"; };
+		86FC494E14FD8CA90079C921 /* HermesAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HermesAppDelegate.m; sourceTree = "<group>"; };
+		86FC495114FD8CA90079C921 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		86FC495414FD8CA90079C921 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		86FC495614FD8CA90079C921 /* HermesViewController.h */ = {isa = PBXFileReference; path = HermesViewController.h; sourceTree = "<group>"; };
+		86FC495714FD8CA90079C921 /* HermesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HermesViewController.m; sourceTree = "<group>"; };
+		86FC495E14FD8CA90079C921 /* Hermes2Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Hermes2Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		86FC495F14FD8CA90079C921 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		86FC496714FD8CA90079C921 /* Hermes2Tests-Info.plist */ = {isa = PBXFileReference; path = "Hermes2Tests-Info.plist"; sourceTree = "<group>"; };
+		86FC496914FD8CA90079C921 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		86FC496B14FD8CA90079C921 /* Hermes2Tests.h */ = {isa = PBXFileReference; path = Hermes2Tests.h; sourceTree = "<group>"; };
+		86FC496C14FD8CA90079C921 /* Hermes2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Hermes2Tests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		86FC493714FD8CA90079C921 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86FC493F14FD8CA90079C921 /* UIKit.framework in Frameworks */,
+				86FC494114FD8CA90079C921 /* Foundation.framework in Frameworks */,
+				86FC494314FD8CA90079C921 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86FC495A14FD8CA90079C921 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86FC496014FD8CA90079C921 /* SenTestingKit.framework in Frameworks */,
+				86FC496114FD8CA90079C921 /* UIKit.framework in Frameworks */,
+				86FC496214FD8CA90079C921 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		86FC492F14FD8CA90079C921 = {
+			isa = PBXGroup;
+			children = (
+				86FC494414FD8CA90079C921 /* Hermes2 */,
+				86FC496514FD8CA90079C921 /* Hermes2Tests */,
+				86FC493D14FD8CA90079C921 /* Frameworks */,
+				86FC493B14FD8CA90079C921 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		86FC493B14FD8CA90079C921 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				86FC493A14FD8CA90079C921 /* Hermes2.app */,
+				86FC495E14FD8CA90079C921 /* Hermes2Tests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		86FC493D14FD8CA90079C921 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				86FC493E14FD8CA90079C921 /* UIKit.framework */,
+				86FC494014FD8CA90079C921 /* Foundation.framework */,
+				86FC494214FD8CA90079C921 /* CoreGraphics.framework */,
+				86FC495F14FD8CA90079C921 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		86FC494414FD8CA90079C921 /* Hermes2 */ = {
+			isa = PBXGroup;
+			children = (
+				86FC494D14FD8CA90079C921 /* HermesAppDelegate.h */,
+				86FC494E14FD8CA90079C921 /* HermesAppDelegate.m */,
+				86FC495014FD8CA90079C921 /* MainStoryboard_iPhone.storyboard */,
+				86FC495314FD8CA90079C921 /* MainStoryboard_iPad.storyboard */,
+				86FC495614FD8CA90079C921 /* HermesViewController.h */,
+				86FC495714FD8CA90079C921 /* HermesViewController.m */,
+				86FC494514FD8CA90079C921 /* Supporting Files */,
+			);
+			path = Hermes2;
+			sourceTree = "<group>";
+		};
+		86FC494514FD8CA90079C921 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				86FC494614FD8CA90079C921 /* Hermes2-Info.plist */,
+				86FC494714FD8CA90079C921 /* InfoPlist.strings */,
+				86FC494A14FD8CA90079C921 /* main.m */,
+				86FC494C14FD8CA90079C921 /* Hermes2-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		86FC496514FD8CA90079C921 /* Hermes2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				86FC496B14FD8CA90079C921 /* Hermes2Tests.h */,
+				86FC496C14FD8CA90079C921 /* Hermes2Tests.m */,
+				86FC496614FD8CA90079C921 /* Supporting Files */,
+			);
+			path = Hermes2Tests;
+			sourceTree = "<group>";
+		};
+		86FC496614FD8CA90079C921 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				86FC496714FD8CA90079C921 /* Hermes2Tests-Info.plist */,
+				86FC496814FD8CA90079C921 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		86FC493914FD8CA90079C921 /* Hermes2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86FC497014FD8CA90079C921 /* Build configuration list for PBXNativeTarget "Hermes2" */;
+			buildPhases = (
+				86FC493614FD8CA90079C921 /* Sources */,
+				86FC493714FD8CA90079C921 /* Frameworks */,
+				86FC493814FD8CA90079C921 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Hermes2;
+			productName = Hermes2;
+			productReference = 86FC493A14FD8CA90079C921 /* Hermes2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		86FC495D14FD8CA90079C921 /* Hermes2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86FC497314FD8CA90079C921 /* Build configuration list for PBXNativeTarget "Hermes2Tests" */;
+			buildPhases = (
+				86FC495914FD8CA90079C921 /* Sources */,
+				86FC495A14FD8CA90079C921 /* Frameworks */,
+				86FC495B14FD8CA90079C921 /* Resources */,
+				86FC495C14FD8CA90079C921 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				86FC496414FD8CA90079C921 /* PBXTargetDependency */,
+			);
+			name = Hermes2Tests;
+			productName = Hermes2Tests;
+			productReference = 86FC495E14FD8CA90079C921 /* Hermes2Tests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		86FC493114FD8CA90079C921 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Hermes;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 86FC493414FD8CA90079C921 /* Build configuration list for PBXProject "Hermes2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 86FC492F14FD8CA90079C921;
+			productRefGroup = 86FC493B14FD8CA90079C921 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				86FC493914FD8CA90079C921 /* Hermes2 */,
+				86FC495D14FD8CA90079C921 /* Hermes2Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		86FC493814FD8CA90079C921 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86FC494914FD8CA90079C921 /* InfoPlist.strings in Resources */,
+				86FC495214FD8CA90079C921 /* MainStoryboard_iPhone.storyboard in Resources */,
+				86FC495514FD8CA90079C921 /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86FC495B14FD8CA90079C921 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86FC496A14FD8CA90079C921 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		86FC495C14FD8CA90079C921 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		86FC493614FD8CA90079C921 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86FC494B14FD8CA90079C921 /* main.m in Sources */,
+				86FC494F14FD8CA90079C921 /* HermesAppDelegate.m in Sources */,
+				86FC495814FD8CA90079C921 /* HermesViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86FC495914FD8CA90079C921 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86FC496D14FD8CA90079C921 /* Hermes2Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		86FC496414FD8CA90079C921 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 86FC493914FD8CA90079C921 /* Hermes2 */;
+			targetProxy = 86FC496314FD8CA90079C921 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		86FC494714FD8CA90079C921 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				86FC494814FD8CA90079C921 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		86FC495014FD8CA90079C921 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				86FC495114FD8CA90079C921 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		86FC495314FD8CA90079C921 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				86FC495414FD8CA90079C921 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		86FC496814FD8CA90079C921 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				86FC496914FD8CA90079C921 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		86FC496E14FD8CA90079C921 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		86FC496F14FD8CA90079C921 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		86FC497114FD8CA90079C921 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hermes2/Hermes2-Prefix.pch";
+				INFOPLIST_FILE = "Hermes2/Hermes2-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		86FC497214FD8CA90079C921 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hermes2/Hermes2-Prefix.pch";
+				INFOPLIST_FILE = "Hermes2/Hermes2-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		86FC497414FD8CA90079C921 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Hermes2.app/Hermes2";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hermes2/Hermes2-Prefix.pch";
+				INFOPLIST_FILE = "Hermes2Tests/Hermes2Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		86FC497514FD8CA90079C921 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Hermes2.app/Hermes2";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hermes2/Hermes2-Prefix.pch";
+				INFOPLIST_FILE = "Hermes2Tests/Hermes2Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		86FC493414FD8CA90079C921 /* Build configuration list for PBXProject "Hermes2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86FC496E14FD8CA90079C921 /* Debug */,
+				86FC496F14FD8CA90079C921 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86FC497014FD8CA90079C921 /* Build configuration list for PBXNativeTarget "Hermes2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86FC497114FD8CA90079C921 /* Debug */,
+				86FC497214FD8CA90079C921 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		86FC497314FD8CA90079C921 /* Build configuration list for PBXNativeTarget "Hermes2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86FC497414FD8CA90079C921 /* Debug */,
+				86FC497514FD8CA90079C921 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 86FC493114FD8CA90079C921 /* Project object */;
+}
