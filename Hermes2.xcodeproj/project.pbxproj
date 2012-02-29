@@ -21,6 +21,15 @@
 		86FC496214FD8CA90079C921 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86FC494014FD8CA90079C921 /* Foundation.framework */; };
 		86FC496A14FD8CA90079C921 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 86FC496814FD8CA90079C921 /* InfoPlist.strings */; };
 		86FC496D14FD8CA90079C921 /* Hermes2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 86FC496C14FD8CA90079C921 /* Hermes2Tests.m */; };
+		86FC498714FD8FE90079C921 /* history.png in Resources */ = {isa = PBXBuildFile; fileRef = 86FC498214FD8FE90079C921 /* history.png */; };
+		86FC498814FD8FE90079C921 /* localDeals.png in Resources */ = {isa = PBXBuildFile; fileRef = 86FC498314FD8FE90079C921 /* localDeals.png */; };
+		86FC498914FD8FE90079C921 /* pendingTransactions.png in Resources */ = {isa = PBXBuildFile; fileRef = 86FC498414FD8FE90079C921 /* pendingTransactions.png */; };
+		86FC498A14FD8FE90079C921 /* sendMoney.png in Resources */ = {isa = PBXBuildFile; fileRef = 86FC498514FD8FE90079C921 /* sendMoney.png */; };
+		86FC498B14FD8FE90079C921 /* sendMoney2.png in Resources */ = {isa = PBXBuildFile; fileRef = 86FC498614FD8FE90079C921 /* sendMoney2.png */; };
+		86FC498E14FDC77E0079C921 /* HermesQuickPayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86FC498D14FDC77E0079C921 /* HermesQuickPayController.m */; };
+		86FC499114FDCA520079C921 /* HermesSendMoneyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86FC499014FDCA520079C921 /* HermesSendMoneyViewController.m */; };
+		86FC499414FDCAE80079C921 /* HermesRequestMoneyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86FC499314FDCAE80079C921 /* HermesRequestMoneyViewController.m */; };
+		86FC499714FDCB300079C921 /* HermesLocalDealsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86FC499614FDCB300079C921 /* HermesLocalDealsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,22 +47,35 @@
 		86FC493E14FD8CA90079C921 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		86FC494014FD8CA90079C921 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		86FC494214FD8CA90079C921 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		86FC494614FD8CA90079C921 /* Hermes2-Info.plist */ = {isa = PBXFileReference; path = "Hermes2-Info.plist"; sourceTree = "<group>"; };
+		86FC494614FD8CA90079C921 /* Hermes2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Hermes2-Info.plist"; sourceTree = "<group>"; };
 		86FC494814FD8CA90079C921 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		86FC494A14FD8CA90079C921 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		86FC494C14FD8CA90079C921 /* Hermes2-Prefix.pch */ = {isa = PBXFileReference; path = "Hermes2-Prefix.pch"; sourceTree = "<group>"; };
-		86FC494D14FD8CA90079C921 /* HermesAppDelegate.h */ = {isa = PBXFileReference; path = HermesAppDelegate.h; sourceTree = "<group>"; };
+		86FC494C14FD8CA90079C921 /* Hermes2-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hermes2-Prefix.pch"; sourceTree = "<group>"; };
+		86FC494D14FD8CA90079C921 /* HermesAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HermesAppDelegate.h; sourceTree = "<group>"; };
 		86FC494E14FD8CA90079C921 /* HermesAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HermesAppDelegate.m; sourceTree = "<group>"; };
 		86FC495114FD8CA90079C921 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		86FC495414FD8CA90079C921 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		86FC495614FD8CA90079C921 /* HermesViewController.h */ = {isa = PBXFileReference; path = HermesViewController.h; sourceTree = "<group>"; };
+		86FC495614FD8CA90079C921 /* HermesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HermesViewController.h; sourceTree = "<group>"; };
 		86FC495714FD8CA90079C921 /* HermesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HermesViewController.m; sourceTree = "<group>"; };
 		86FC495E14FD8CA90079C921 /* Hermes2Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Hermes2Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		86FC495F14FD8CA90079C921 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		86FC496714FD8CA90079C921 /* Hermes2Tests-Info.plist */ = {isa = PBXFileReference; path = "Hermes2Tests-Info.plist"; sourceTree = "<group>"; };
+		86FC496714FD8CA90079C921 /* Hermes2Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Hermes2Tests-Info.plist"; sourceTree = "<group>"; };
 		86FC496914FD8CA90079C921 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		86FC496B14FD8CA90079C921 /* Hermes2Tests.h */ = {isa = PBXFileReference; path = Hermes2Tests.h; sourceTree = "<group>"; };
+		86FC496B14FD8CA90079C921 /* Hermes2Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Hermes2Tests.h; sourceTree = "<group>"; };
 		86FC496C14FD8CA90079C921 /* Hermes2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Hermes2Tests.m; sourceTree = "<group>"; };
+		86FC498214FD8FE90079C921 /* history.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = history.png; sourceTree = "<group>"; };
+		86FC498314FD8FE90079C921 /* localDeals.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = localDeals.png; sourceTree = "<group>"; };
+		86FC498414FD8FE90079C921 /* pendingTransactions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pendingTransactions.png; sourceTree = "<group>"; };
+		86FC498514FD8FE90079C921 /* sendMoney.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sendMoney.png; sourceTree = "<group>"; };
+		86FC498614FD8FE90079C921 /* sendMoney2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sendMoney2.png; sourceTree = "<group>"; };
+		86FC498C14FDC77E0079C921 /* HermesQuickPayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HermesQuickPayController.h; sourceTree = "<group>"; };
+		86FC498D14FDC77E0079C921 /* HermesQuickPayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HermesQuickPayController.m; sourceTree = "<group>"; };
+		86FC498F14FDCA520079C921 /* HermesSendMoneyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HermesSendMoneyViewController.h; sourceTree = "<group>"; };
+		86FC499014FDCA520079C921 /* HermesSendMoneyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HermesSendMoneyViewController.m; sourceTree = "<group>"; };
+		86FC499214FDCAE80079C921 /* HermesRequestMoneyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HermesRequestMoneyViewController.h; sourceTree = "<group>"; };
+		86FC499314FDCAE80079C921 /* HermesRequestMoneyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HermesRequestMoneyViewController.m; sourceTree = "<group>"; };
+		86FC499514FDCB300079C921 /* HermesLocalDealsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HermesLocalDealsViewController.h; sourceTree = "<group>"; };
+		86FC499614FDCB300079C921 /* HermesLocalDealsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HermesLocalDealsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +138,14 @@
 				86FC494D14FD8CA90079C921 /* HermesAppDelegate.h */,
 				86FC494E14FD8CA90079C921 /* HermesAppDelegate.m */,
 				86FC495014FD8CA90079C921 /* MainStoryboard_iPhone.storyboard */,
+				86FC498C14FDC77E0079C921 /* HermesQuickPayController.h */,
+				86FC498D14FDC77E0079C921 /* HermesQuickPayController.m */,
+				86FC498F14FDCA520079C921 /* HermesSendMoneyViewController.h */,
+				86FC499014FDCA520079C921 /* HermesSendMoneyViewController.m */,
+				86FC499214FDCAE80079C921 /* HermesRequestMoneyViewController.h */,
+				86FC499314FDCAE80079C921 /* HermesRequestMoneyViewController.m */,
+				86FC499514FDCB300079C921 /* HermesLocalDealsViewController.h */,
+				86FC499614FDCB300079C921 /* HermesLocalDealsViewController.m */,
 				86FC495314FD8CA90079C921 /* MainStoryboard_iPad.storyboard */,
 				86FC495614FD8CA90079C921 /* HermesViewController.h */,
 				86FC495714FD8CA90079C921 /* HermesViewController.m */,
@@ -127,6 +157,11 @@
 		86FC494514FD8CA90079C921 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				86FC498214FD8FE90079C921 /* history.png */,
+				86FC498314FD8FE90079C921 /* localDeals.png */,
+				86FC498414FD8FE90079C921 /* pendingTransactions.png */,
+				86FC498514FD8FE90079C921 /* sendMoney.png */,
+				86FC498614FD8FE90079C921 /* sendMoney2.png */,
 				86FC494614FD8CA90079C921 /* Hermes2-Info.plist */,
 				86FC494714FD8CA90079C921 /* InfoPlist.strings */,
 				86FC494A14FD8CA90079C921 /* main.m */,
@@ -228,6 +263,11 @@
 				86FC494914FD8CA90079C921 /* InfoPlist.strings in Resources */,
 				86FC495214FD8CA90079C921 /* MainStoryboard_iPhone.storyboard in Resources */,
 				86FC495514FD8CA90079C921 /* MainStoryboard_iPad.storyboard in Resources */,
+				86FC498714FD8FE90079C921 /* history.png in Resources */,
+				86FC498814FD8FE90079C921 /* localDeals.png in Resources */,
+				86FC498914FD8FE90079C921 /* pendingTransactions.png in Resources */,
+				86FC498A14FD8FE90079C921 /* sendMoney.png in Resources */,
+				86FC498B14FD8FE90079C921 /* sendMoney2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +305,10 @@
 				86FC494B14FD8CA90079C921 /* main.m in Sources */,
 				86FC494F14FD8CA90079C921 /* HermesAppDelegate.m in Sources */,
 				86FC495814FD8CA90079C921 /* HermesViewController.m in Sources */,
+				86FC498E14FDC77E0079C921 /* HermesQuickPayController.m in Sources */,
+				86FC499114FDCA520079C921 /* HermesSendMoneyViewController.m in Sources */,
+				86FC499414FDCAE80079C921 /* HermesRequestMoneyViewController.m in Sources */,
+				86FC499714FDCB300079C921 /* HermesLocalDealsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +419,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hermes2/Hermes2-Prefix.pch";
 				INFOPLIST_FILE = "Hermes2/Hermes2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -386,6 +431,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hermes2/Hermes2-Prefix.pch";
 				INFOPLIST_FILE = "Hermes2/Hermes2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
