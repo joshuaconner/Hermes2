@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		86E7CEEE14FDE092002A0D81 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86E7CEED14FDE092002A0D81 /* CoreLocation.framework */; };
+		86E7CEF114FDE966002A0D81 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86E7CEF014FDE966002A0D81 /* MapKit.framework */; };
 		86FC493F14FD8CA90079C921 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86FC493E14FD8CA90079C921 /* UIKit.framework */; };
 		86FC494114FD8CA90079C921 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86FC494014FD8CA90079C921 /* Foundation.framework */; };
 		86FC494314FD8CA90079C921 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86FC494214FD8CA90079C921 /* CoreGraphics.framework */; };
@@ -43,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		86E7CEED14FDE092002A0D81 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		86E7CEF014FDE966002A0D81 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		86FC493A14FD8CA90079C921 /* Hermes2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hermes2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86FC493E14FD8CA90079C921 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		86FC494014FD8CA90079C921 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -83,6 +87,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86E7CEF114FDE966002A0D81 /* MapKit.framework in Frameworks */,
+				86E7CEEE14FDE092002A0D81 /* CoreLocation.framework in Frameworks */,
 				86FC493F14FD8CA90079C921 /* UIKit.framework in Frameworks */,
 				86FC494114FD8CA90079C921 /* Foundation.framework in Frameworks */,
 				86FC494314FD8CA90079C921 /* CoreGraphics.framework in Frameworks */,
@@ -105,6 +111,8 @@
 		86FC492F14FD8CA90079C921 = {
 			isa = PBXGroup;
 			children = (
+				86E7CEF014FDE966002A0D81 /* MapKit.framework */,
+				86E7CEED14FDE092002A0D81 /* CoreLocation.framework */,
 				86FC494414FD8CA90079C921 /* Hermes2 */,
 				86FC496514FD8CA90079C921 /* Hermes2Tests */,
 				86FC493D14FD8CA90079C921 /* Frameworks */,
@@ -490,6 +498,7 @@
 				86FC497214FD8CA90079C921 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		86FC497314FD8CA90079C921 /* Build configuration list for PBXNativeTarget "Hermes2Tests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +507,7 @@
 				86FC497514FD8CA90079C921 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -24,7 +24,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="1bT-K0-m5H"/>
+                    <navigationItem key="navigationItem" title="Request Money" id="1bT-K0-m5H"/>
                     <connections>
                         <outlet property="view" destination="pg2-52-3dv" id="ke2-Q5-43T"/>
                     </connections>
@@ -42,22 +42,28 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Local Deals" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="qZw-pE-pK1">
-                                <rect key="frame" x="116" y="188" width="89" height="21"/>
+                                <rect key="frame" x="39" y="342" width="243" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="7rH-Bw-zNE">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="cGx-8B-TXh"/>
+                    <navigationItem key="navigationItem" title="Local Deals" id="cGx-8B-TXh"/>
                     <connections>
+                        <outlet property="label" destination="qZw-pE-pK1" id="6hq-pA-xM1"/>
+                        <outlet property="map" destination="7rH-Bw-zNE" id="5iP-hY-6nE"/>
                         <outlet property="view" destination="LfP-IL-D0a" id="T99-Od-n9C"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="493" y="777"/>
+            <point key="canvasLocation" x="600" y="800"/>
         </scene>
         <!--Hermes View Controller - Simple Money-->
         <scene sceneID="5">
@@ -72,8 +78,8 @@
                                 <rect key="frame" x="175" y="174" width="125" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="History" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="1DZ-qd-VbV">
-                                        <rect key="frame" x="26" y="65" width="72" height="21"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Transactions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="1DZ-qd-VbV">
+                                        <rect key="frame" x="6" y="65" width="113" height="23"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -255,7 +261,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="jHW-oz-vOe"/>
+                    <navigationItem key="navigationItem" title="QuickPay" id="jHW-oz-vOe"/>
                     <connections>
                         <outlet property="view" destination="jQM-cN-Q7c" id="lL8-3H-9DE"/>
                     </connections>
@@ -281,7 +287,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="YmV-6D-CBU"/>
+                    <navigationItem key="navigationItem" title="Send Money" id="YmV-6D-CBU"/>
                     <connections>
                         <outlet property="view" destination="6xD-DJ-8Bx" id="BNx-Vb-Td8"/>
                     </connections>
@@ -369,6 +375,10 @@
     <classes>
         <class className="HermesLocalDealsViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HermesLocalDealsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="map" candidateClass="MKMapView"/>
+            </relationships>
         </class>
         <class className="HermesQuickPayController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HermesQuickPayController.h"/>
