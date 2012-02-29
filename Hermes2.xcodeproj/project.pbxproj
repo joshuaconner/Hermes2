@@ -24,6 +24,8 @@
 		8611AA8A14FE0982009184D7 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8611AA8914FE0982009184D7 /* CoreVideo.framework */; };
 		8611AA8B14FE098B009184D7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8611AA2314FDFE32009184D7 /* QuartzCore.framework */; };
 		8611AA8D14FE0994009184D7 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8611AA8C14FE0994009184D7 /* libiconv.dylib */; };
+		8611AA9314FE0C36009184D7 /* SigninViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8611AA9214FE0C36009184D7 /* SigninViewController.m */; };
+		8611AA9614FE10BF009184D7 /* HermesSignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8611AA9514FE10BF009184D7 /* HermesSignInViewController.m */; };
 		86E7CEEE14FDE092002A0D81 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86E7CEED14FDE092002A0D81 /* CoreLocation.framework */; };
 		86E7CEF114FDE966002A0D81 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86E7CEF014FDE966002A0D81 /* MapKit.framework */; };
 		86FC493F14FD8CA90079C921 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86FC493E14FD8CA90079C921 /* UIKit.framework */; };
@@ -134,6 +136,11 @@
 		8611AA8714FE0959009184D7 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		8611AA8914FE0982009184D7 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		8611AA8C14FE0994009184D7 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		8611AA8E14FE0C19009184D7 /* Hermes2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Hermes2.xcodeproj; sourceTree = "<group>"; };
+		8611AA9114FE0C36009184D7 /* SigninViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SigninViewController.h; sourceTree = "<group>"; };
+		8611AA9214FE0C36009184D7 /* SigninViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SigninViewController.m; sourceTree = "<group>"; };
+		8611AA9414FE10BF009184D7 /* HermesSignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HermesSignInViewController.h; sourceTree = "<group>"; };
+		8611AA9514FE10BF009184D7 /* HermesSignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HermesSignInViewController.m; sourceTree = "<group>"; };
 		86E7CEED14FDE092002A0D81 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		86E7CEF014FDE966002A0D81 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		86FC493A14FD8CA90079C921 /* Hermes2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hermes2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -285,9 +292,17 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		8611AA8F14FE0C19009184D7 /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
+			sourceTree = "<group>";
+		};
 		86FC492F14FD8CA90079C921 = {
 			isa = PBXGroup;
 			children = (
+				8611AA9414FE10BF009184D7 /* HermesSignInViewController.h */,
+				8611AA9514FE10BF009184D7 /* HermesSignInViewController.m */,
+				8611AA8E14FE0C19009184D7 /* Hermes2.xcodeproj */,
 				8611AA8C14FE0994009184D7 /* libiconv.dylib */,
 				8611AA8914FE0982009184D7 /* CoreVideo.framework */,
 				8611AA8714FE0959009184D7 /* CoreMedia.framework */,
@@ -342,6 +357,8 @@
 				86FC499014FDCA520079C921 /* HermesSendMoneyViewController.m */,
 				86FC499214FDCAE80079C921 /* HermesRequestMoneyViewController.h */,
 				86FC499314FDCAE80079C921 /* HermesRequestMoneyViewController.m */,
+				8611AA9114FE0C36009184D7 /* SigninViewController.h */,
+				8611AA9214FE0C36009184D7 /* SigninViewController.m */,
 				86FC499514FDCB300079C921 /* HermesLocalDealsViewController.h */,
 				86FC499614FDCB300079C921 /* HermesLocalDealsViewController.m */,
 				86FC495314FD8CA90079C921 /* MainStoryboard_iPad.storyboard */,
@@ -448,6 +465,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 8611AA8F14FE0C19009184D7 /* Products */;
+					ProjectRef = 8611AA8E14FE0C19009184D7 /* Hermes2.xcodeproj */;
+				},
+				{
 					ProductGroup = 8611AA2A14FE0082009184D7 /* Products */;
 					ProjectRef = 8611AA2914FE0082009184D7 /* RestKit.xcodeproj */;
 				},
@@ -549,6 +570,8 @@
 				86FC499114FDCA520079C921 /* HermesSendMoneyViewController.m in Sources */,
 				86FC499414FDCAE80079C921 /* HermesRequestMoneyViewController.m in Sources */,
 				86FC499714FDCB300079C921 /* HermesLocalDealsViewController.m in Sources */,
+				8611AA9314FE0C36009184D7 /* SigninViewController.m in Sources */,
+				8611AA9614FE10BF009184D7 /* HermesSignInViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,7 +15,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    NSLog(@"didFinishLaunchingWithOptions");
+    RKLogConfigureByName("RestKit/Network", RKLogLevelTrace); 
+    RKClient *client = [RKClient clientWithBaseURL:@"http://severe-leaf-6733.herokuapp.com/"];
+    client.authenticationType = RKRequestAuthenticationTypeHTTPBasic;
+    
+    [RKClient setSharedClient:client];
+    
+    [[RKObjectManager sharedManager] setSerializationMIMEType:RKMIMETypeJSON];
     return YES;
 }
 							
