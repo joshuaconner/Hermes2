@@ -7,6 +7,7 @@
 //
 
 #import "HermesAppDelegate.h"
+#import <RestKit/RestKit.h>
 
 @implementation HermesAppDelegate
 
