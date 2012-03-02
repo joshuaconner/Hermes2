@@ -13,9 +13,12 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+@property (weak, nonatomic) IBOutlet UIButton *rememberMeButton;
 
 - (IBAction)dismissKeyboard:(id)sender;
+- (IBAction)checkboxChecked;
 
-- (void)sendRequest;
+
+- (IBAction)sendRequest;
 
 @end

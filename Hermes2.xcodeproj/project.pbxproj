@@ -25,8 +25,14 @@
 		8611AA8B14FE098B009184D7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8611AA2314FDFE32009184D7 /* QuartzCore.framework */; };
 		8611AA8D14FE0994009184D7 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8611AA8C14FE0994009184D7 /* libiconv.dylib */; };
 		8611AA9314FE0C36009184D7 /* SigninViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8611AA9214FE0C36009184D7 /* SigninViewController.m */; };
+		867CD9101500821700BEA79C /* checkbox-checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 867CD90D1500821700BEA79C /* checkbox-checked.png */; };
+		867CD9111500821700BEA79C /* checkbox-pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 867CD90E1500821700BEA79C /* checkbox-pressed.png */; };
+		867CD9121500821700BEA79C /* checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 867CD90F1500821700BEA79C /* checkbox.png */; };
+		86C634C0150095B200DFB6D7 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 86C634BF150095B200DFB6D7 /* MBProgressHUD.m */; };
+		86C634C615009EE000DFB6D7 /* george2.png in Resources */ = {isa = PBXBuildFile; fileRef = 86C634C515009EE000DFB6D7 /* george2.png */; };
 		86E7CEEE14FDE092002A0D81 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86E7CEED14FDE092002A0D81 /* CoreLocation.framework */; };
 		86E7CEF114FDE966002A0D81 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86E7CEF014FDE966002A0D81 /* MapKit.framework */; };
+		86F896AC1500B1280093B8A3 /* george3.png in Resources */ = {isa = PBXBuildFile; fileRef = 86F896AB1500B1280093B8A3 /* george3.png */; };
 		86FC493F14FD8CA90079C921 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86FC493E14FD8CA90079C921 /* UIKit.framework */; };
 		86FC494114FD8CA90079C921 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86FC494014FD8CA90079C921 /* Foundation.framework */; };
 		86FC494314FD8CA90079C921 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86FC494214FD8CA90079C921 /* CoreGraphics.framework */; };
@@ -138,8 +144,15 @@
 		8611AA8E14FE0C19009184D7 /* Hermes2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Hermes2.xcodeproj; sourceTree = "<group>"; };
 		8611AA9114FE0C36009184D7 /* SigninViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SigninViewController.h; sourceTree = "<group>"; };
 		8611AA9214FE0C36009184D7 /* SigninViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SigninViewController.m; sourceTree = "<group>"; };
+		867CD90D1500821700BEA79C /* checkbox-checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox-checked.png"; sourceTree = "<group>"; };
+		867CD90E1500821700BEA79C /* checkbox-pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox-pressed.png"; sourceTree = "<group>"; };
+		867CD90F1500821700BEA79C /* checkbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkbox.png; sourceTree = "<group>"; };
+		86C634BE150095B200DFB6D7 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = MBProgressHUD/MBProgressHUD.h; sourceTree = "<group>"; };
+		86C634BF150095B200DFB6D7 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = MBProgressHUD/MBProgressHUD.m; sourceTree = "<group>"; };
+		86C634C515009EE000DFB6D7 /* george2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = george2.png; sourceTree = "<group>"; };
 		86E7CEED14FDE092002A0D81 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		86E7CEF014FDE966002A0D81 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		86F896AB1500B1280093B8A3 /* george3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = george3.png; sourceTree = "<group>"; };
 		86FC493A14FD8CA90079C921 /* Hermes2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hermes2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86FC493E14FD8CA90079C921 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		86FC494014FD8CA90079C921 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -297,6 +310,8 @@
 		86FC492F14FD8CA90079C921 = {
 			isa = PBXGroup;
 			children = (
+				86C634BE150095B200DFB6D7 /* MBProgressHUD.h */,
+				86C634BF150095B200DFB6D7 /* MBProgressHUD.m */,
 				8611AA8E14FE0C19009184D7 /* Hermes2.xcodeproj */,
 				8611AA8C14FE0994009184D7 /* libiconv.dylib */,
 				8611AA8914FE0982009184D7 /* CoreVideo.framework */,
@@ -367,6 +382,11 @@
 		86FC494514FD8CA90079C921 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				86F896AB1500B1280093B8A3 /* george3.png */,
+				86C634C515009EE000DFB6D7 /* george2.png */,
+				867CD90D1500821700BEA79C /* checkbox-checked.png */,
+				867CD90E1500821700BEA79C /* checkbox-pressed.png */,
+				867CD90F1500821700BEA79C /* checkbox.png */,
 				86FC498214FD8FE90079C921 /* history.png */,
 				86FC498314FD8FE90079C921 /* localDeals.png */,
 				86FC498414FD8FE90079C921 /* pendingTransactions.png */,
@@ -524,6 +544,11 @@
 				8611AA8214FE08BA009184D7 /* zbar-help.html in Resources */,
 				8611AA8314FE08BA009184D7 /* zbar-helpicons.png in Resources */,
 				8611AA8414FE08BA009184D7 /* zbar-samples.png in Resources */,
+				867CD9101500821700BEA79C /* checkbox-checked.png in Resources */,
+				867CD9111500821700BEA79C /* checkbox-pressed.png in Resources */,
+				867CD9121500821700BEA79C /* checkbox.png in Resources */,
+				86C634C615009EE000DFB6D7 /* george2.png in Resources */,
+				86F896AC1500B1280093B8A3 /* george3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,6 +591,7 @@
 				86FC499414FDCAE80079C921 /* HermesRequestMoneyViewController.m in Sources */,
 				86FC499714FDCB300079C921 /* HermesLocalDealsViewController.m in Sources */,
 				8611AA9314FE0C36009184D7 /* SigninViewController.m in Sources */,
+				86C634C0150095B200DFB6D7 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,19 +8,41 @@
 
 #import "SigninViewController.h"
 #import "HermesViewController.h"
+#import "MBProgressHUD.h"
 
-@interface SigninViewController ()
-
+@interface SigninViewController () <MBProgressHUDDelegate> 
+@property (strong, nonatomic) MBProgressHUD *HUD;
+@property (nonatomic) BOOL loginSuccess;
+@property (nonatomic) BOOL checkboxIsChecked;
 @end
 
 @implementation SigninViewController
+@synthesize checkboxIsChecked = _checkboxIsChecked;
+@synthesize loginSuccess = _loginSuccess;
 @synthesize emailTextField;
 @synthesize passwordTextField;
+@synthesize rememberMeButton;
+@synthesize HUD = _HUD;
+
+- (MBProgressHUD *)HUD {
+    if (!_HUD) {
+        _HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+    }
+    return _HUD;
+}
+
+- (void)viewDidLoad
+{
+    self.passwordTextField.delegate = self;
+    self.loginSuccess = NO;
+    self.checkboxIsChecked = YES;
+}
 
 - (void)viewDidUnload
 {
     [self setEmailTextField:nil];
     [self setPasswordTextField:nil];
+    [self setRememberMeButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -46,14 +68,38 @@
 
 
 - (IBAction)dismissKeyboard:(id)sender{
-    [self.view endEditing:YES];
+    [self.passwordTextField resignFirstResponder];
 }
 
-- (void)sendRequest{
+/**
+ * Changes the state of the "remember me" checkbox when it's tapped
+ */ 
+- (IBAction)checkboxChecked {
+    NSLog(@"Checkbox tapped!");
+    self.checkboxIsChecked = !self.checkboxIsChecked;
+    [self.rememberMeButton setSelected:self.checkboxIsChecked];
+}
+
+- (IBAction)showWithGradient {
+	[self.navigationController.view addSubview:self.HUD];
+	
+	self.HUD.dimBackground = YES;
+	
+	// Regiser for HUD callbacks so we can remove it from the window at the right time
+    self.HUD.delegate = self;
+    
+    self.HUD.labelText = @"Signing in...";
+	
+    // Show the HUD while the provided method executes in a new thread
+    [self.HUD show:YES];
+}
+
+- (IBAction)sendRequest {
     RKParams* params = [RKParams params];
     [params setValue:emailTextField.text forParam:@"user[email]"];
     [params setValue:passwordTextField.text forParam:@"user[password]"];
     [[RKClient sharedClient] post:@"/users/sign_in.json" params:params delegate:self];
+    [self showWithGradient];
 }
 
 - (void)requestDidStartLoad:(RKRequest *)request{
@@ -71,13 +117,19 @@
 - (void)request:(RKRequest *)request didFailLoadWithError:(NSError *)error {
     RKLogError(@"Load of RKRequest %@ failed with error: %@", request, error);
     NSLog(@"RK error");
+    [self.HUD hide:YES];
 }
 
 - (void)request:(RKRequest *)request didLoadResponse:(RKResponse *)response {
     RKLogCritical(@"Loading of RKRequest %@ completed with status code %d. Response body: %@", request, response.statusCode, [response bodyAsString]);
     if (response.statusCode == 201) {
-       HermesViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"Main Menu"];
-        [self.navigationController pushViewController:controller animated:YES];
+        //HACK: we're receiving two identical responses and it's screwing stuff up, so we're only going act on the first one
+        if (!self.loginSuccess) {
+            self.loginSuccess = true;
+            [self.HUD hide:YES];
+            HermesViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"Main Menu"];
+            [self.navigationController pushViewController:controller animated:YES];
+        }
     }
     
 }
@@ -136,6 +188,14 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+}
+
+#pragma mark MBProgressHUDDelegate methods
+
+- (void)hudWasHidden:(MBProgressHUD *)hud {
+    // Remove HUD from screen when the HUD was hidded
+    [self.HUD removeFromSuperview];
+	self.HUD = nil;
 }
 
 @end
