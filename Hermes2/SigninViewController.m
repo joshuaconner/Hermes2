@@ -57,7 +57,7 @@
     NSLog(@"textfield should return");
     if (textField == passwordTextField){
         [self sendRequest];
-        [self.view endEditing:YES];
+        [self.passwordTextField resignFirstResponder];
     }
     return YES;
 }
@@ -68,7 +68,7 @@
 
 
 - (IBAction)dismissKeyboard:(id)sender{
-    [self.passwordTextField resignFirstResponder];
+    [self.view endEditing:YES];
 }
 
 /**
