@@ -8,14 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
-#import <RestKit/CoreData.h>
+#import <RestKit/RestKit.h>
 
-@interface User : NSManagedObject
+@interface User : NSObject
 
-@property (nonatomic, retain) NSNumber * userID;
-@property (nonatomic, retain) NSString * email;
-@property (nonatomic, retain) NSString * password;
-@property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSDecimalNumber * balance;
+@property (nonatomic, retain) NSString * email;
+@property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) NSString * password;
+@property (nonatomic, retain) NSNumber * userID;
 
 @end

@@ -1,16 +1,17 @@
 //
-//  PendingTransactionsViewController.m
+//  PaidTransactionsViewController.m
 //  Hermes2
 //
 //  Created by Arthur Pang on 3/3/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "PendingTransactionsViewController.h"
+#import "PaidTransactionsViewController.h"
 #import "PullToRefreshView.h"
 #import "Transaction.h"
 
-@implementation PendingTransactionsViewController
+@implementation PaidTransactionsViewController
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -28,7 +29,6 @@
     pull = [[PullToRefreshView alloc] initWithScrollView:self.tableView];
     pull.delegate = self;
     [self.tableView addSubview:pull];
-    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -47,7 +47,6 @@
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
-
 - (void)pullToRefreshViewShouldRefresh:(PullToRefreshView *)view{
     [self reloadTableData];
 }
@@ -60,7 +59,9 @@
 - (void)loadData {
     // Load the object model via RestKit	
     RKObjectManager* objectManager = [RKObjectManager sharedManager];
-    [objectManager loadObjectsAtResourcePath:@"/users/1/unpaidTransactions" delegate:self block:^(RKObjectLoader* loader) {
+    [objectManager loadObjectsAtResourcePath:@"/users/1/paidTransactions" delegate:self block:^(RKObjectLoader* loader) {
+        // Twitter returns statuses as a naked array in JSON, so we instruct the loader
+        // to user the appropriate object mapping
         loader.objectMapping = [objectManager.mappingProvider objectMappingForClass:[Transaction class]];
     }];
 }
@@ -69,8 +70,8 @@
 
 - (void)objectLoader:(RKObjectLoader*)objectLoader didLoadObjects:(NSArray*)objects {
 	NSLog(@"Loaded objects: %@", objects);
-    pendingTransactions = objects;
-    Transaction *transaction = [pendingTransactions objectAtIndex:0];
+    paidTransactions = objects;
+    Transaction *transaction = [paidTransactions objectAtIndex:0];
     NSLog(@"transaction description: %@", transaction.transactionDescription);
     [self.tableView reloadData];
 }
@@ -100,7 +101,7 @@
     RKLogCritical(@"Loading of RKRequest %@ completed with status code %d. Response body: %@", request, response.statusCode, [response bodyAsString]);
     if (response.statusCode == 201) {
         /*HermesViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"Main Menu"];
-        [self.navigationController pushViewController:controller animated:YES];*/
+         [self.navigationController pushViewController:controller animated:YES];*/
         
     }
     
@@ -122,8 +123,8 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    if ([pendingTransactions count] > 0) {
-        return [pendingTransactions count];
+    if ([paidTransactions count] > 0) {
+        return [paidTransactions count];
     } else {
         return 1;
     }
@@ -138,7 +139,7 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     }
-    Transaction *transaction = [pendingTransactions objectAtIndex:indexPath.row];
+    Transaction *transaction = [paidTransactions objectAtIndex:indexPath.row];
     if (transaction) {
         cell.textLabel.text = transaction.transactionDescription;
     } else {

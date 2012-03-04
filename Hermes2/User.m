@@ -7,14 +7,15 @@
 //
 
 #import "User.h"
+#import "Transaction.h"
 
 
 @implementation User
 
-@dynamic userID;
-@dynamic email;
-@dynamic password;
-@dynamic name;
-@dynamic balance;
+@synthesize balance;
+@synthesize email;
+@synthesize name;
+@synthesize password;
+@synthesize userID;
 
 @end

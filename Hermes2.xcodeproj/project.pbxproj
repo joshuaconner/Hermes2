@@ -8,13 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		3C17F5F3150302D0001B7838 /* PendingTransactionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C17F5F2150302CF001B7838 /* PendingTransactionsViewController.m */; };
-		3C17F5FA15030654001B7838 /* Bill.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C17F5F915030654001B7838 /* Bill.m */; };
+		3C1C981D150330E5008DA392 /* PullToRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1C981C150330E5008DA392 /* PullToRefreshView.m */; };
+		3C1C9820150330F1008DA392 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C1C981E150330F1008DA392 /* arrow.png */; };
+		3C1C9821150330F1008DA392 /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C1C981F150330F1008DA392 /* arrow@2x.png */; };
+		3C1C98221503333A008DA392 /* PullToRefreshView.h in Sources */ = {isa = PBXBuildFile; fileRef = 3C1C981B150330E5008DA392 /* PullToRefreshView.h */; };
+		3C1C98231503333A008DA392 /* PullToRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1C981C150330E5008DA392 /* PullToRefreshView.m */; };
+		3C1C9826150338FF008DA392 /* PaidTransactionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1C9825150338FF008DA392 /* PaidTransactionsViewController.m */; };
 		3C38161915019FD500145C2D /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C38161815019FD500145C2D /* SignUpViewController.m */; };
 		3C742C281501AC100022F37B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3C742C271501AC100022F37B /* Settings.bundle */; };
 		3C742C621501F46C0022F37B /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C742C591501F4190022F37B /* libRestKit.a */; };
 		3C742C701501F8DE0022F37B /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C742C6F1501F8DE0022F37B /* users.json */; };
 		3C742C731501FD800022F37B /* SimpleMoney.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3C742C711501FD800022F37B /* SimpleMoney.xcdatamodeld */; };
-		3C742D2115020D000022F37B /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C742D2015020D000022F37B /* User.m */; };
+		3CC9B6C315033FCF00661806 /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9B6C215033FCF00661806 /* Transaction.m */; };
+		3CC9B6C615033FF400661806 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9B6C515033FF400661806 /* User.m */; };
 		8611AA1A14FDFE03009184D7 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8611AA1914FDFE03009184D7 /* CFNetwork.framework */; };
 		8611AA1C14FDFE0F009184D7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8611AA1B14FDFE0F009184D7 /* CoreData.framework */; };
 		8611AA1E14FDFE16009184D7 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8611AA1D14FDFE16009184D7 /* MobileCoreServices.framework */; };
@@ -107,8 +113,12 @@
 /* Begin PBXFileReference section */
 		3C17F5F1150302CF001B7838 /* PendingTransactionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PendingTransactionsViewController.h; sourceTree = "<group>"; };
 		3C17F5F2150302CF001B7838 /* PendingTransactionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PendingTransactionsViewController.m; sourceTree = "<group>"; };
-		3C17F5F815030654001B7838 /* Bill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bill.h; sourceTree = "<group>"; };
-		3C17F5F915030654001B7838 /* Bill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bill.m; sourceTree = "<group>"; };
+		3C1C981B150330E5008DA392 /* PullToRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullToRefreshView.h; sourceTree = "<group>"; };
+		3C1C981C150330E5008DA392 /* PullToRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullToRefreshView.m; sourceTree = "<group>"; };
+		3C1C981E150330F1008DA392 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
+		3C1C981F150330F1008DA392 /* arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@2x.png"; sourceTree = "<group>"; };
+		3C1C9824150338FF008DA392 /* PaidTransactionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaidTransactionsViewController.h; sourceTree = "<group>"; };
+		3C1C9825150338FF008DA392 /* PaidTransactionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaidTransactionsViewController.m; sourceTree = "<group>"; };
 		3C38161715019FD500145C2D /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		3C38161815019FD500145C2D /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		3C742C271501AC100022F37B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = ../Settings.bundle; sourceTree = "<group>"; };
@@ -116,8 +126,10 @@
 		3C742C6F1501F8DE0022F37B /* users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
 		3C742C721501FD800022F37B /* SimpleMoney.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimpleMoney.xcdatamodel; sourceTree = "<group>"; };
 		3C742D17150206AA0022F37B /* Hermes2 copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Hermes2 copy-Info.plist"; path = "/Users/apang42/Projects/simpleMoney/Hermes2 copy-Info.plist"; sourceTree = "<absolute>"; };
-		3C742D1F15020D000022F37B /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		3C742D2015020D000022F37B /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		3CC9B6C115033FCF00661806 /* Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transaction.h; sourceTree = "<group>"; };
+		3CC9B6C215033FCF00661806 /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transaction.m; sourceTree = "<group>"; };
+		3CC9B6C415033FF400661806 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		3CC9B6C515033FF400661806 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		8611AA1914FDFE03009184D7 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		8611AA1B14FDFE0F009184D7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		8611AA1D14FDFE16009184D7 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -235,6 +247,8 @@
 		3C38161B1501A17600145C2D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				3C1C981B150330E5008DA392 /* PullToRefreshView.h */,
+				3C1C981C150330E5008DA392 /* PullToRefreshView.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -254,10 +268,10 @@
 			isa = PBXGroup;
 			children = (
 				3C742C711501FD800022F37B /* SimpleMoney.xcdatamodeld */,
-				3C17F5F815030654001B7838 /* Bill.h */,
-				3C17F5F915030654001B7838 /* Bill.m */,
-				3C742D1F15020D000022F37B /* User.h */,
-				3C742D2015020D000022F37B /* User.m */,
+				3CC9B6C415033FF400661806 /* User.h */,
+				3CC9B6C515033FF400661806 /* User.m */,
+				3CC9B6C115033FCF00661806 /* Transaction.h */,
+				3CC9B6C215033FCF00661806 /* Transaction.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -384,6 +398,8 @@
 				86FC495014FD8CA90079C921 /* MainStoryboard_iPhone.storyboard */,
 				3C17F5F1150302CF001B7838 /* PendingTransactionsViewController.h */,
 				3C17F5F2150302CF001B7838 /* PendingTransactionsViewController.m */,
+				3C1C9824150338FF008DA392 /* PaidTransactionsViewController.h */,
+				3C1C9825150338FF008DA392 /* PaidTransactionsViewController.m */,
 				86FC498C14FDC77E0079C921 /* HermesQuickPayController.h */,
 				86FC498D14FDC77E0079C921 /* HermesQuickPayController.m */,
 				86FC498F14FDCA520079C921 /* HermesSendMoneyViewController.h */,
@@ -405,6 +421,8 @@
 		86FC494514FD8CA90079C921 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3C1C981E150330F1008DA392 /* arrow.png */,
+				3C1C981F150330F1008DA392 /* arrow@2x.png */,
 				3C742C6F1501F8DE0022F37B /* users.json */,
 				3C742C271501AC100022F37B /* Settings.bundle */,
 				86FC498214FD8FE90079C921 /* history.png */,
@@ -562,6 +580,8 @@
 				8611AA8414FE08BA009184D7 /* zbar-samples.png in Resources */,
 				3C742C281501AC100022F37B /* Settings.bundle in Resources */,
 				3C742C701501F8DE0022F37B /* users.json in Resources */,
+				3C1C9820150330F1008DA392 /* arrow.png in Resources */,
+				3C1C9821150330F1008DA392 /* arrow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,6 +616,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C1C98221503333A008DA392 /* PullToRefreshView.h in Sources */,
+				3C1C98231503333A008DA392 /* PullToRefreshView.m in Sources */,
 				86FC494B14FD8CA90079C921 /* main.m in Sources */,
 				86FC494F14FD8CA90079C921 /* HermesAppDelegate.m in Sources */,
 				86FC495814FD8CA90079C921 /* HermesViewController.m in Sources */,
@@ -606,9 +628,10 @@
 				8611AA9314FE0C36009184D7 /* SigninViewController.m in Sources */,
 				3C38161915019FD500145C2D /* SignUpViewController.m in Sources */,
 				3C742C731501FD800022F37B /* SimpleMoney.xcdatamodeld in Sources */,
-				3C742D2115020D000022F37B /* User.m in Sources */,
 				3C17F5F3150302D0001B7838 /* PendingTransactionsViewController.m in Sources */,
-				3C17F5FA15030654001B7838 /* Bill.m in Sources */,
+				3C1C9826150338FF008DA392 /* PaidTransactionsViewController.m in Sources */,
+				3CC9B6C315033FCF00661806 /* Transaction.m in Sources */,
+				3CC9B6C615033FF400661806 /* User.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,6 +640,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				86FC496D14FD8CA90079C921 /* Hermes2Tests.m in Sources */,
+				3C1C981D150330E5008DA392 /* PullToRefreshView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

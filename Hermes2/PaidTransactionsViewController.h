@@ -1,5 +1,5 @@
 //
-//  PendingTransactionsViewController.h
+//  PaidTransactionsViewController.h
 //  Hermes2
 //
 //  Created by Arthur Pang on 3/3/12.
@@ -10,9 +10,9 @@
 #import <RestKit/RestKit.h>
 #import "PullToRefreshView.h"
 
-@interface PendingTransactionsViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource, RKObjectLoaderDelegate, PullToRefreshViewDelegate> {
+@interface PaidTransactionsViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource, RKObjectLoaderDelegate, PullToRefreshViewDelegate> {
     PullToRefreshView *pull;
-    NSArray *pendingTransactions;
+    NSArray *paidTransactions;
 }
 
 @end
