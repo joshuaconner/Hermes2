@@ -1,0 +1,9 @@
+[{
+    "user": {
+        "id": 42,
+        "email": "walt@abq.com",
+        "password": "ecryptmeplz",
+        "name": "Walter White",
+        "balance": 42000
+    }
+}]

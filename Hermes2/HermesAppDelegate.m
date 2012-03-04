@@ -8,6 +8,9 @@
 
 #import "HermesAppDelegate.h"
 #import <RestKit/RestKit.h>
+#import <RestKit/CoreData.h>
+#import "User.h"
+#import "Bill.h"
 
 @implementation HermesAppDelegate
 
@@ -15,14 +18,71 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    NSLog(@"didFinishLaunchingWithOptions");
-    RKLogConfigureByName("RestKit/Network", RKLogLevelTrace); 
-    RKClient *client = [RKClient clientWithBaseURL:@"http://severe-leaf-6733.herokuapp.com/"];
-    client.authenticationType = RKRequestAuthenticationTypeHTTPBasic;
+    RKLogConfigureByName("RestKit/Network*", RKLogLevelTrace);
+    // Initialize RestKit
+	RKObjectManager* objectManager = [RKObjectManager objectManagerWithBaseURL:@"http://localhost:3000/"];
+    // Enable automatic network activity indicator management
+    objectManager.client.requestQueue.showsNetworkActivityIndicatorWhenBusy = YES;
     
-    [RKClient setSharedClient:client];
+    NSString *databaseName = @"SimpleMoney.sqlite";
+    objectManager.objectStore = [RKManagedObjectStore objectStoreWithStoreFilename:databaseName];
     
-    [[RKObjectManager sharedManager] setSerializationMIMEType:RKMIMETypeJSON];
+    // Setup our object mappings
+    // Here we are targetting a Core Data entity with a specific name.
+    // This allows us to map back HCI user objects directly onto NSManagedObject instances
+    
+    RKManagedObjectMapping *userMapping = [RKManagedObjectMapping mappingForEntityWithName:@"User"];
+    userMapping.primaryKeyAttribute = @"userID";
+    [userMapping mapKeyPath:@"id" toAttribute:@"userID"];
+    [userMapping mapKeyPath:@"email" toAttribute:@"email"];
+    [userMapping mapKeyPath:@"password" toAttribute:@"password"];
+    [userMapping mapKeyPath:@"name" toAttribute:@"name"];
+    [userMapping mapKeyPath:@"balance" toAttribute:@"balance"];
+
+    /* Old school mapping for a non-persistant User model. Ignore for now.
+    RKObjectMapping* userMapping = [RKObjectMapping mappingForClass:[User class]];
+    [userMapping mapKeyPath:@"id" toAttribute:@"userID"];
+    [userMapping mapKeyPath:@"email" toAttribute:@"email"];
+    [userMapping mapKeyPath:@"password" toAttribute:@"password"];
+    [userMapping mapKeyPath:@"name" toAttribute:@"name"];
+    [userMapping mapKeyPath:@"balance" toAttribute:@"balance"];
+    */
+    
+    // This maps User model attributes to JSON params that our rails server understands.
+    RKObjectMapping* userSerializationMapping = [RKObjectMapping mappingForClass:[NSMutableDictionary class]]; 
+    [userSerializationMapping mapKeyPath:@"userID" toAttribute:@"user[id]"];
+    [userSerializationMapping mapKeyPath:@"email" toAttribute:@"user[email]"];
+    [userSerializationMapping mapKeyPath:@"password" toAttribute:@"user[password]"];
+    [userSerializationMapping mapKeyPath:@"name" toAttribute:@"user[name]"];
+    [userSerializationMapping mapKeyPath:@"balance" toAttribute:@"user[balance]"];
+    
+    
+    RKManagedObjectMapping* billMapping = [RKManagedObjectMapping mappingForClass:[Bill class]];
+    billMapping.primaryKeyAttribute = @"transactionID";
+    [billMapping mapKeyPathsToAttributes:@"id", @"transactionID",
+     @"amount", @"amount",
+     @"sender_id", @"sender_id",
+     @"recipient_id", @"recipient_id",
+     @"complete", @"complete",
+     @"description", @"transactionDescription",
+     @"created_at", @"created_at",
+     @"updated_at", @"updated_at",
+     nil];
+    [billMapping mapRelationship:@"user" withMapping:userMapping];
+    
+    
+    // Setup date format so our timestamps get converted into NSDate objects.
+    [RKObjectMapping addDefaultDateFormatterForString:@"E MMM d HH:mm:ss Z y" inTimeZone:nil];
+    
+    // Register our mappings with the provider.
+    [objectManager.mappingProvider setMapping:userMapping forKeyPath:@"user"];
+    [objectManager.mappingProvider setSerializationMapping:userSerializationMapping forClass:[User class]];
+    [objectManager.mappingProvider setMapping:billMapping forKeyPath:@"status"];
+    [objectManager.router routeClass:[User class] toResourcePath:@"/users/"];
+
+    
+    
+
     return YES;
 }
 							

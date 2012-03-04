@@ -7,13 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C17F5F3150302D0001B7838 /* PendingTransactionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C17F5F2150302CF001B7838 /* PendingTransactionsViewController.m */; };
+		3C17F5FA15030654001B7838 /* Bill.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C17F5F915030654001B7838 /* Bill.m */; };
+		3C38161915019FD500145C2D /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C38161815019FD500145C2D /* SignUpViewController.m */; };
+		3C742C281501AC100022F37B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3C742C271501AC100022F37B /* Settings.bundle */; };
+		3C742C621501F46C0022F37B /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C742C591501F4190022F37B /* libRestKit.a */; };
+		3C742C701501F8DE0022F37B /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C742C6F1501F8DE0022F37B /* users.json */; };
+		3C742C731501FD800022F37B /* SimpleMoney.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3C742C711501FD800022F37B /* SimpleMoney.xcdatamodeld */; };
+		3C742D2115020D000022F37B /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C742D2015020D000022F37B /* User.m */; };
 		8611AA1A14FDFE03009184D7 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8611AA1914FDFE03009184D7 /* CFNetwork.framework */; };
 		8611AA1C14FDFE0F009184D7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8611AA1B14FDFE0F009184D7 /* CoreData.framework */; };
 		8611AA1E14FDFE16009184D7 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8611AA1D14FDFE16009184D7 /* MobileCoreServices.framework */; };
 		8611AA2014FDFE1E009184D7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8611AA1F14FDFE1E009184D7 /* Security.framework */; };
 		8611AA2214FDFE2A009184D7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8611AA2114FDFE2A009184D7 /* SystemConfiguration.framework */; };
 		8611AA2614FDFE3E009184D7 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8611AA2514FDFE3E009184D7 /* libxml2.dylib */; };
-		8611AA3E14FE01A5009184D7 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8611AA3414FE0083009184D7 /* libRestKit.a */; };
 		8611AA8014FE08BA009184D7 /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8611AA7A14FE08BA009184D7 /* libzbar.a */; };
 		8611AA8114FE08BA009184D7 /* zbar-back.png in Resources */ = {isa = PBXBuildFile; fileRef = 8611AA7C14FE08BA009184D7 /* zbar-back.png */; };
 		8611AA8214FE08BA009184D7 /* zbar-help.html in Resources */ = {isa = PBXBuildFile; fileRef = 8611AA7D14FE08BA009184D7 /* zbar-help.html */; };
@@ -53,37 +60,37 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		8611AA3314FE0083009184D7 /* PBXContainerItemProxy */ = {
+		3C742C581501F4190022F37B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 8611AA2914FE0082009184D7 /* RestKit.xcodeproj */;
+			containerPortal = 3C742C4E1501F4190022F37B /* RestKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 25160D1614564E810060A5C5;
 			remoteInfo = RestKit;
 		};
-		8611AA3514FE0083009184D7 /* PBXContainerItemProxy */ = {
+		3C742C5A1501F4190022F37B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 8611AA2914FE0082009184D7 /* RestKit.xcodeproj */;
+			containerPortal = 3C742C4E1501F4190022F37B /* RestKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 25160D2614564E820060A5C5;
 			remoteInfo = RestKitTests;
 		};
-		8611AA3714FE0083009184D7 /* PBXContainerItemProxy */ = {
+		3C742C5C1501F4190022F37B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 8611AA2914FE0082009184D7 /* RestKit.xcodeproj */;
+			containerPortal = 3C742C4E1501F4190022F37B /* RestKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 25160E62145651060060A5C5;
 			remoteInfo = RestKitFramework;
 		};
-		8611AA3914FE0083009184D7 /* PBXContainerItemProxy */ = {
+		3C742C5E1501F4190022F37B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 8611AA2914FE0082009184D7 /* RestKit.xcodeproj */;
+			containerPortal = 3C742C4E1501F4190022F37B /* RestKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 25160E78145651060060A5C5;
 			remoteInfo = RestKitFrameworkTests;
 		};
-		8611AA3B14FE0104009184D7 /* PBXContainerItemProxy */ = {
+		3C742C601501F45D0022F37B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 8611AA2914FE0082009184D7 /* RestKit.xcodeproj */;
+			containerPortal = 3C742C4E1501F4190022F37B /* RestKit.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 25160D1514564E810060A5C5;
 			remoteInfo = RestKit;
@@ -98,6 +105,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C17F5F1150302CF001B7838 /* PendingTransactionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PendingTransactionsViewController.h; sourceTree = "<group>"; };
+		3C17F5F2150302CF001B7838 /* PendingTransactionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PendingTransactionsViewController.m; sourceTree = "<group>"; };
+		3C17F5F815030654001B7838 /* Bill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bill.h; sourceTree = "<group>"; };
+		3C17F5F915030654001B7838 /* Bill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bill.m; sourceTree = "<group>"; };
+		3C38161715019FD500145C2D /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		3C38161815019FD500145C2D /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		3C742C271501AC100022F37B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = ../Settings.bundle; sourceTree = "<group>"; };
+		3C742C4E1501F4190022F37B /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
+		3C742C6F1501F8DE0022F37B /* users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
+		3C742C721501FD800022F37B /* SimpleMoney.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimpleMoney.xcdatamodel; sourceTree = "<group>"; };
+		3C742D17150206AA0022F37B /* Hermes2 copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Hermes2 copy-Info.plist"; path = "/Users/apang42/Projects/simpleMoney/Hermes2 copy-Info.plist"; sourceTree = "<absolute>"; };
+		3C742D1F15020D000022F37B /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		3C742D2015020D000022F37B /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		8611AA1914FDFE03009184D7 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		8611AA1B14FDFE0F009184D7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		8611AA1D14FDFE16009184D7 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -105,7 +125,6 @@
 		8611AA2114FDFE2A009184D7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		8611AA2314FDFE32009184D7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8611AA2514FDFE3E009184D7 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
-		8611AA2914FE0082009184D7 /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
 		8611AA6614FE08BA009184D7 /* Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decoder.h; sourceTree = "<group>"; };
 		8611AA6714FE08BA009184D7 /* Exception.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exception.h; sourceTree = "<group>"; };
 		8611AA6814FE08BA009184D7 /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
@@ -135,7 +154,6 @@
 		8611AA8714FE0959009184D7 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		8611AA8914FE0982009184D7 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		8611AA8C14FE0994009184D7 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
-		8611AA8E14FE0C19009184D7 /* Hermes2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Hermes2.xcodeproj; sourceTree = "<group>"; };
 		8611AA9114FE0C36009184D7 /* SigninViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SigninViewController.h; sourceTree = "<group>"; };
 		8611AA9214FE0C36009184D7 /* SigninViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SigninViewController.m; sourceTree = "<group>"; };
 		86E7CEED14FDE092002A0D81 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -180,23 +198,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8611AA8D14FE0994009184D7 /* libiconv.dylib in Frameworks */,
-				8611AA8B14FE098B009184D7 /* QuartzCore.framework in Frameworks */,
-				8611AA8A14FE0982009184D7 /* CoreVideo.framework in Frameworks */,
-				8611AA8814FE0959009184D7 /* CoreMedia.framework in Frameworks */,
-				8611AA8614FE08FE009184D7 /* AVFoundation.framework in Frameworks */,
 				8611AA2614FDFE3E009184D7 /* libxml2.dylib in Frameworks */,
+				8611AA8B14FE098B009184D7 /* QuartzCore.framework in Frameworks */,
 				8611AA2214FDFE2A009184D7 /* SystemConfiguration.framework in Frameworks */,
 				8611AA2014FDFE1E009184D7 /* Security.framework in Frameworks */,
 				8611AA1E14FDFE16009184D7 /* MobileCoreServices.framework in Frameworks */,
 				8611AA1C14FDFE0F009184D7 /* CoreData.framework in Frameworks */,
 				8611AA1A14FDFE03009184D7 /* CFNetwork.framework in Frameworks */,
+				3C742C621501F46C0022F37B /* libRestKit.a in Frameworks */,
+				8611AA8D14FE0994009184D7 /* libiconv.dylib in Frameworks */,
+				8611AA8A14FE0982009184D7 /* CoreVideo.framework in Frameworks */,
+				8611AA8814FE0959009184D7 /* CoreMedia.framework in Frameworks */,
+				8611AA8614FE08FE009184D7 /* AVFoundation.framework in Frameworks */,
 				86E7CEF114FDE966002A0D81 /* MapKit.framework in Frameworks */,
 				86E7CEEE14FDE092002A0D81 /* CoreLocation.framework in Frameworks */,
 				86FC493F14FD8CA90079C921 /* UIKit.framework in Frameworks */,
 				86FC494114FD8CA90079C921 /* Foundation.framework in Frameworks */,
 				86FC494314FD8CA90079C921 /* CoreGraphics.framework in Frameworks */,
-				8611AA3E14FE01A5009184D7 /* libRestKit.a in Frameworks */,
 				8611AA8014FE08BA009184D7 /* libzbar.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,15 +232,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8611AA2A14FE0082009184D7 /* Products */ = {
+		3C38161B1501A17600145C2D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				8611AA3414FE0083009184D7 /* libRestKit.a */,
-				8611AA3614FE0083009184D7 /* RestKitTests.octest */,
-				8611AA3814FE0083009184D7 /* RestKit.framework */,
-				8611AA3A14FE0083009184D7 /* RestKitFrameworkTests.octest */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		3C742C4F1501F4190022F37B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3C742C591501F4190022F37B /* libRestKit.a */,
+				3C742C5B1501F4190022F37B /* RestKitTests.octest */,
+				3C742C5D1501F4190022F37B /* RestKit.framework */,
+				3C742C5F1501F4190022F37B /* RestKitFrameworkTests.octest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		3CCAE20415015154003C82E1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3C742C711501FD800022F37B /* SimpleMoney.xcdatamodeld */,
+				3C17F5F815030654001B7838 /* Bill.h */,
+				3C17F5F915030654001B7838 /* Bill.m */,
+				3C742D1F15020D000022F37B /* User.h */,
+				3C742D2015020D000022F37B /* User.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		8611AA6214FE08BA009184D7 /* ZBarSDK */ = {
@@ -289,34 +326,16 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		8611AA8F14FE0C19009184D7 /* Products */ = {
-			isa = PBXGroup;
-			name = Products;
-			sourceTree = "<group>";
-		};
 		86FC492F14FD8CA90079C921 = {
 			isa = PBXGroup;
 			children = (
-				8611AA8E14FE0C19009184D7 /* Hermes2.xcodeproj */,
-				8611AA8C14FE0994009184D7 /* libiconv.dylib */,
-				8611AA8914FE0982009184D7 /* CoreVideo.framework */,
-				8611AA8714FE0959009184D7 /* CoreMedia.framework */,
-				8611AA8514FE08FE009184D7 /* AVFoundation.framework */,
-				8611AA2914FE0082009184D7 /* RestKit.xcodeproj */,
-				8611AA2514FDFE3E009184D7 /* libxml2.dylib */,
-				8611AA2314FDFE32009184D7 /* QuartzCore.framework */,
-				8611AA2114FDFE2A009184D7 /* SystemConfiguration.framework */,
-				8611AA1F14FDFE1E009184D7 /* Security.framework */,
-				8611AA1D14FDFE16009184D7 /* MobileCoreServices.framework */,
-				8611AA1B14FDFE0F009184D7 /* CoreData.framework */,
-				8611AA1914FDFE03009184D7 /* CFNetwork.framework */,
-				86E7CEF014FDE966002A0D81 /* MapKit.framework */,
-				86E7CEED14FDE092002A0D81 /* CoreLocation.framework */,
+				3C742C4E1501F4190022F37B /* RestKit.xcodeproj */,
 				86FC494414FD8CA90079C921 /* Hermes2 */,
 				86FC496514FD8CA90079C921 /* Hermes2Tests */,
 				86FC493D14FD8CA90079C921 /* Frameworks */,
 				86FC493B14FD8CA90079C921 /* Products */,
 				8611AA6214FE08BA009184D7 /* ZBarSDK */,
+				3C742D17150206AA0022F37B /* Hermes2 copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -332,6 +351,19 @@
 		86FC493D14FD8CA90079C921 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8611AA8C14FE0994009184D7 /* libiconv.dylib */,
+				8611AA2514FDFE3E009184D7 /* libxml2.dylib */,
+				8611AA8914FE0982009184D7 /* CoreVideo.framework */,
+				8611AA8714FE0959009184D7 /* CoreMedia.framework */,
+				8611AA8514FE08FE009184D7 /* AVFoundation.framework */,
+				8611AA2314FDFE32009184D7 /* QuartzCore.framework */,
+				8611AA2114FDFE2A009184D7 /* SystemConfiguration.framework */,
+				8611AA1F14FDFE1E009184D7 /* Security.framework */,
+				8611AA1D14FDFE16009184D7 /* MobileCoreServices.framework */,
+				8611AA1B14FDFE0F009184D7 /* CoreData.framework */,
+				8611AA1914FDFE03009184D7 /* CFNetwork.framework */,
+				86E7CEF014FDE966002A0D81 /* MapKit.framework */,
+				86E7CEED14FDE092002A0D81 /* CoreLocation.framework */,
 				86FC493E14FD8CA90079C921 /* UIKit.framework */,
 				86FC494014FD8CA90079C921 /* Foundation.framework */,
 				86FC494214FD8CA90079C921 /* CoreGraphics.framework */,
@@ -345,20 +377,26 @@
 			children = (
 				86FC494D14FD8CA90079C921 /* HermesAppDelegate.h */,
 				86FC494E14FD8CA90079C921 /* HermesAppDelegate.m */,
+				8611AA9114FE0C36009184D7 /* SigninViewController.h */,
+				8611AA9214FE0C36009184D7 /* SigninViewController.m */,
+				3C38161715019FD500145C2D /* SignUpViewController.h */,
+				3C38161815019FD500145C2D /* SignUpViewController.m */,
 				86FC495014FD8CA90079C921 /* MainStoryboard_iPhone.storyboard */,
+				3C17F5F1150302CF001B7838 /* PendingTransactionsViewController.h */,
+				3C17F5F2150302CF001B7838 /* PendingTransactionsViewController.m */,
 				86FC498C14FDC77E0079C921 /* HermesQuickPayController.h */,
 				86FC498D14FDC77E0079C921 /* HermesQuickPayController.m */,
 				86FC498F14FDCA520079C921 /* HermesSendMoneyViewController.h */,
 				86FC499014FDCA520079C921 /* HermesSendMoneyViewController.m */,
 				86FC499214FDCAE80079C921 /* HermesRequestMoneyViewController.h */,
 				86FC499314FDCAE80079C921 /* HermesRequestMoneyViewController.m */,
-				8611AA9114FE0C36009184D7 /* SigninViewController.h */,
-				8611AA9214FE0C36009184D7 /* SigninViewController.m */,
 				86FC499514FDCB300079C921 /* HermesLocalDealsViewController.h */,
 				86FC499614FDCB300079C921 /* HermesLocalDealsViewController.m */,
 				86FC495314FD8CA90079C921 /* MainStoryboard_iPad.storyboard */,
 				86FC495614FD8CA90079C921 /* HermesViewController.h */,
 				86FC495714FD8CA90079C921 /* HermesViewController.m */,
+				3C38161B1501A17600145C2D /* Helpers */,
+				3CCAE20415015154003C82E1 /* Models */,
 				86FC494514FD8CA90079C921 /* Supporting Files */,
 			);
 			path = Hermes2;
@@ -367,6 +405,8 @@
 		86FC494514FD8CA90079C921 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3C742C6F1501F8DE0022F37B /* users.json */,
+				3C742C271501AC100022F37B /* Settings.bundle */,
 				86FC498214FD8FE90079C921 /* history.png */,
 				86FC498314FD8FE90079C921 /* localDeals.png */,
 				86FC498414FD8FE90079C921 /* pendingTransactions.png */,
@@ -413,7 +453,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				8611AA3C14FE0104009184D7 /* PBXTargetDependency */,
+				3C742C611501F45D0022F37B /* PBXTargetDependency */,
 			);
 			name = Hermes2;
 			productName = Hermes2;
@@ -460,12 +500,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 8611AA8F14FE0C19009184D7 /* Products */;
-					ProjectRef = 8611AA8E14FE0C19009184D7 /* Hermes2.xcodeproj */;
-				},
-				{
-					ProductGroup = 8611AA2A14FE0082009184D7 /* Products */;
-					ProjectRef = 8611AA2914FE0082009184D7 /* RestKit.xcodeproj */;
+					ProductGroup = 3C742C4F1501F4190022F37B /* Products */;
+					ProjectRef = 3C742C4E1501F4190022F37B /* RestKit.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -477,32 +513,32 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		8611AA3414FE0083009184D7 /* libRestKit.a */ = {
+		3C742C591501F4190022F37B /* libRestKit.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libRestKit.a;
-			remoteRef = 8611AA3314FE0083009184D7 /* PBXContainerItemProxy */;
+			remoteRef = 3C742C581501F4190022F37B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		8611AA3614FE0083009184D7 /* RestKitTests.octest */ = {
+		3C742C5B1501F4190022F37B /* RestKitTests.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = RestKitTests.octest;
-			remoteRef = 8611AA3514FE0083009184D7 /* PBXContainerItemProxy */;
+			remoteRef = 3C742C5A1501F4190022F37B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		8611AA3814FE0083009184D7 /* RestKit.framework */ = {
+		3C742C5D1501F4190022F37B /* RestKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = RestKit.framework;
-			remoteRef = 8611AA3714FE0083009184D7 /* PBXContainerItemProxy */;
+			remoteRef = 3C742C5C1501F4190022F37B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		8611AA3A14FE0083009184D7 /* RestKitFrameworkTests.octest */ = {
+		3C742C5F1501F4190022F37B /* RestKitFrameworkTests.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = RestKitFrameworkTests.octest;
-			remoteRef = 8611AA3914FE0083009184D7 /* PBXContainerItemProxy */;
+			remoteRef = 3C742C5E1501F4190022F37B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -524,6 +560,8 @@
 				8611AA8214FE08BA009184D7 /* zbar-help.html in Resources */,
 				8611AA8314FE08BA009184D7 /* zbar-helpicons.png in Resources */,
 				8611AA8414FE08BA009184D7 /* zbar-samples.png in Resources */,
+				3C742C281501AC100022F37B /* Settings.bundle in Resources */,
+				3C742C701501F8DE0022F37B /* users.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,6 +604,11 @@
 				86FC499414FDCAE80079C921 /* HermesRequestMoneyViewController.m in Sources */,
 				86FC499714FDCB300079C921 /* HermesLocalDealsViewController.m in Sources */,
 				8611AA9314FE0C36009184D7 /* SigninViewController.m in Sources */,
+				3C38161915019FD500145C2D /* SignUpViewController.m in Sources */,
+				3C742C731501FD800022F37B /* SimpleMoney.xcdatamodeld in Sources */,
+				3C742D2115020D000022F37B /* User.m in Sources */,
+				3C17F5F3150302D0001B7838 /* PendingTransactionsViewController.m in Sources */,
+				3C17F5FA15030654001B7838 /* Bill.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,10 +623,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		8611AA3C14FE0104009184D7 /* PBXTargetDependency */ = {
+		3C742C611501F45D0022F37B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = RestKit;
-			targetProxy = 8611AA3B14FE0104009184D7 /* PBXContainerItemProxy */;
+			targetProxy = 3C742C601501F45D0022F37B /* PBXContainerItemProxy */;
 		};
 		86FC496414FD8CA90079C921 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -792,6 +835,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3C742C711501FD800022F37B /* SimpleMoney.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3C742C721501FD800022F37B /* SimpleMoney.xcdatamodel */,
+			);
+			currentVersion = 3C742C721501FD800022F37B /* SimpleMoney.xcdatamodel */;
+			path = SimpleMoney.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 86FC493114FD8CA90079C921 /* Project object */;
 }

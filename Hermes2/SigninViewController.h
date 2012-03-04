@@ -9,13 +9,15 @@
 #import <UIKit/UIKit.h>
 #import <RestKit/RestKit.h>
 
-@interface SigninViewController : UITableViewController <RKRequestDelegate,UITextFieldDelegate>
+
+@interface SigninViewController : UITableViewController <RKObjectLoaderDelegate, RKRequestDelegate, UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 
 - (IBAction)dismissKeyboard:(id)sender;
-
+- (IBAction)signInButtonWasPressed:(id)sender;
+- (IBAction)signUpButtonWasPressed:(id)sender;
 - (void)sendRequest;
 
 @end

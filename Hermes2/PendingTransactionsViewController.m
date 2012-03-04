@@ -1,27 +1,42 @@
 //
-//  SigninViewController.m
-//  Hermes
+//  PendingTransactionsViewController.m
+//  Hermes2
 //
-//  Created by Arthur Pang on 2/19/12.
-//  Copyright (c) 2012 Northern Arizona University. All rights reserved.
+//  Created by Arthur Pang on 3/3/12.
+//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "SigninViewController.h"
-#import "HermesViewController.h"
-#import "User.h"
+#import "PendingTransactionsViewController.h"
+#import "Bill.h"
 
-@interface SigninViewController ()
+@interface PendingTransactionsViewController ()
 
 @end
 
-@implementation SigninViewController
-@synthesize emailTextField;
-@synthesize passwordTextField;
+@implementation PendingTransactionsViewController
+
+- (id)initWithStyle:(UITableViewStyle)style
+{
+    self = [super initWithStyle:style];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    [self loadData];
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+ 
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
 
 - (void)viewDidUnload
 {
-    [self setEmailTextField:nil];
-    [self setPasswordTextField:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -32,52 +47,31 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    NSLog(@"textfield should return");
-    if (textField == passwordTextField){
-        [self sendRequest];
-        [self.view endEditing:YES];
-    }
-    return YES;
-}
-
-- (void)textFieldDidEndEditing:(UITextField *)textField {
-    NSLog(@"textFieldDidEndEditing");
-}
-
-
-- (IBAction)dismissKeyboard:(id)sender {
-    [self.view endEditing:YES];
-}
-
-- (IBAction)signInButtonWasPressed:(id)sender {
-    NSLog(@"sign in button was pressed");
-}
-
-- (IBAction)signUpButtonWasPressed:(id)sender {
-    NSLog(@"sign up button was pressed");
-}
-
-- (void)sendRequest {
-    
-    RKObjectManager *objectManager = [RKObjectManager sharedManager];
-    [objectManager loadObjectsAtResourcePath:@"/users/sign_in" delegate:self block:^(RKObjectLoader* loader) {
-        loader.objectMapping = [objectManager.mappingProvider objectMappingForClass:[User class]];
-        RKParams *params = [RKParams params];
-        [params setValue:emailTextField.text forParam:@"user[email]"];
-        [params setValue:passwordTextField.text forParam:@"user[password]"];
-        loader.params = params;
-        [loader setMethod:RKRequestMethodPOST];
+- (void)loadData {
+    // Load the object model via RestKit	
+    RKObjectManager* objectManager = [RKObjectManager sharedManager];
+    [objectManager loadObjectsAtResourcePath:@"/transactions" delegate:self block:^(RKObjectLoader* loader) {
+        // Twitter returns statuses as a naked array in JSON, so we instruct the loader
+        // to user the appropriate object mapping
+        loader.objectMapping = [objectManager.mappingProvider objectMappingForClass:[Bill class]];
     }];
-    
+}
+
+- (void)loadObjectsFromDataStore {
+    NSFetchRequest *request = [Bill fetchRequest];
+    NSSortDescriptor* descriptor = [NSSortDescriptor sortDescriptorWithKey:@"createdAt" ascending:NO];
+    [request setSortDescriptors:[NSArray arrayWithObject:descriptor]];
+    pendingTransactions = [Bill objectsWithFetchRequest:request];
 }
 
 #pragma mark RKObjectLoaderDelegate methods
 
 - (void)objectLoader:(RKObjectLoader*)objectLoader didLoadObjects:(NSArray*)objects {
 	NSLog(@"Loaded objects: %@", objects);
-    User *user = [objects objectAtIndex:0];
-    NSLog(@"user email: %@", user.email);
+    pendingTransactions = objects;
+    Bill *bill = [pendingTransactions objectAtIndex:0];
+    NSLog(@"bill description: %@", bill.transactionDescription);
+    [self.tableView reloadData];
 }
 
 - (void)objectLoader:(RKObjectLoader*)objectLoader didFailWithError:(NSError*)error {
@@ -104,8 +98,8 @@
 - (void)request:(RKRequest *)request didLoadResponse:(RKResponse *)response {
     RKLogCritical(@"Loading of RKRequest %@ completed with status code %d. Response body: %@", request, response.statusCode, [response bodyAsString]);
     if (response.statusCode == 201) {
-        HermesViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"Main Menu"];
-        [self.navigationController pushViewController:controller animated:YES];
+        /*HermesViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"Main Menu"];
+        [self.navigationController pushViewController:controller animated:YES];*/
         
     }
     
@@ -113,6 +107,44 @@
 
 - (void)request:(RKRequest *)request didReceiveData:(NSInteger)bytesReceived totalBytesReceived:(NSInteger)totalBytesReceived totalBytesExpectedToReceive:(NSInteger)totalBytesExpectedToReceive{
     NSLog(@"did get data");
+}
+
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    // Return the number of sections.
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    // Return the number of rows in the section.
+    if ([pendingTransactions count] > 0) {
+        return [pendingTransactions count];
+    } else {
+        return 1;
+    }
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Check for a reusable cell first, use that if it exists
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    
+    // If there is no reusable cell of this type, create a new one
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+    }
+    Bill *bill = [pendingTransactions objectAtIndex:indexPath.row];
+    if (bill) {
+        cell.textLabel.text = bill.transactionDescription;
+    } else {
+        cell.textLabel.text = @"test";
+    }
+    
+    return cell;
 }
 
 /*
