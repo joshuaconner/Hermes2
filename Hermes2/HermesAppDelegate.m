@@ -20,7 +20,7 @@
 {
     RKLogConfigureByName("RestKit/Network*", RKLogLevelTrace);
     // Initialize RestKit
-	RKObjectManager* objectManager = [RKObjectManager objectManagerWithBaseURL:@"http://localhost:3000/"];
+	RKObjectManager* objectManager = [RKObjectManager objectManagerWithBaseURL:@"http://severe-leaf-6733.herokuapp.com/"];
     // Enable automatic network activity indicator management
     objectManager.client.requestQueue.showsNetworkActivityIndicatorWhenBusy = YES;
     
@@ -39,7 +39,7 @@
     [userMapping mapKeyPath:@"password" toAttribute:@"password"];
     [userMapping mapKeyPath:@"name" toAttribute:@"name"];
     [userMapping mapKeyPath:@"balance" toAttribute:@"balance"];
-*/
+     */
     
     
     RKObjectMapping* userMapping = [RKObjectMapping mappingForClass:[User class]];
