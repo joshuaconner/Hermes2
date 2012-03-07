@@ -653,53 +653,6 @@
         <image name="sendMoney.png" width="64" height="64"/>
         <image name="sendMoney2.png" width="64" height="44"/>
     </resources>
-    <classes>
-        <class className="HermesLocalDealsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/HermesLocalDealsViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="label" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="map" candidateClass="MKMapView"/>
-            </relationships>
-        </class>
-        <class className="HermesQuickPayController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/HermesQuickPayController.h"/>
-        </class>
-        <class className="HermesRequestMoneyViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/HermesRequestMoneyViewController.h"/>
-        </class>
-        <class className="HermesSendMoneyViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/HermesSendMoneyViewController.h"/>
-        </class>
-        <class className="HermesViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/HermesViewController.h"/>
-        </class>
-        <class className="PaidTransactionsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PaidTransactionsViewController.h"/>
-        </class>
-        <class className="PendingTransactionsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PendingTransactionsViewController.h"/>
-        </class>
-        <class className="SignUpViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SignUpViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="createAccountButtonWasPressed:"/>
-                <relationship kind="action" name="dismissKeyboard:"/>
-                <relationship kind="outlet" name="emailTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="SigninViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SigninViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="dismissKeyboard:"/>
-                <relationship kind="action" name="signInButtonWasPressed:"/>
-                <relationship kind="action" name="signUpButtonWasPressed:"/>
-                <relationship kind="outlet" name="emailTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

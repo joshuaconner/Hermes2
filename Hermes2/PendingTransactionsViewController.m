@@ -136,11 +136,12 @@
     
     // If there is no reusable cell of this type, create a new one
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"Cell"];
     }
     Transaction *transaction = [pendingTransactions objectAtIndex:indexPath.row];
     if (transaction) {
         cell.textLabel.text = transaction.transactionDescription;
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"Amount due: $%@",transaction.amount];
     } else {
         cell.textLabel.text = @"test";
     }
