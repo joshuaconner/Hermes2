@@ -9,19 +9,43 @@
 #import "SigninViewController.h"
 #import "HermesViewController.h"
 #import "User.h"
+#import "SFHFKeychainUtils.h"
 
 @interface SigninViewController ()
-
+@property (nonatomic) BOOL checkboxIsChecked;
 @end
 
 @implementation SigninViewController
 @synthesize emailTextField;
 @synthesize passwordTextField;
+@synthesize rememberMeCheckbox = _rememberMeCheckbox;
+@synthesize checkboxIsChecked = _checkboxIsChecked;
+
+#define SERVICE_NAME @"HermesSimpleMoney"
+
+
+/**
+ * prepopulate username and password from keychain if possible
+ */
+- (void)viewDidLoad
+{
+   self.checkboxIsChecked = YES;
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *email = [defaults objectForKey:@"email"];
+    NSString *password = [SFHFKeychainUtils getPasswordForUsername:email 
+                                                    andServiceName:SERVICE_NAME 
+                                                             error:nil];
+    
+    self.emailTextField.text = email;
+    self.passwordTextField.text = password;
+}
 
 - (void)viewDidUnload
 {
     [self setEmailTextField:nil];
     [self setPasswordTextField:nil];
+    [self setRememberMeCheckbox:nil];
+
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -32,6 +56,9 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+/**
+ * send request and end editing if exiting the passwordTextField
+ */
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     NSLog(@"textfield should return");
     if (textField == passwordTextField){
@@ -41,24 +68,28 @@
     return YES;
 }
 
-- (void)textFieldDidEndEditing:(UITextField *)textField {
-    NSLog(@"textFieldDidEndEditing");
-}
-
-
+/**
+ * hides the keyboard when we tap away from it
+ */
 - (IBAction)dismissKeyboard:(id)sender {
     [self.view endEditing:YES];
 }
 
-- (IBAction)signInButtonWasPressed:(id)sender {
-    NSLog(@"sign in button was pressed");
-}
-
-- (IBAction)signUpButtonWasPressed:(id)sender {
-    NSLog(@"sign up button was pressed");
-}
 
 - (void)sendRequest {
+    //save username and password if needed
+    if (self.checkboxIsChecked) {
+        //save values to keychain
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        [defaults setObject:self.emailTextField.text forKey:@"email"];
+        [defaults synchronize];
+        
+        [SFHFKeychainUtils storeUsername:self.emailTextField.text
+                             andPassword:self.passwordTextField.text
+                          forServiceName:SERVICE_NAME 
+                          updateExisting:YES 
+                                   error:nil];
+    }
     
     RKObjectManager *objectManager = [RKObjectManager sharedManager];
     [objectManager loadObjectsAtResourcePath:@"/users/sign_in" delegate:self block:^(RKObjectLoader* loader) {
@@ -70,6 +101,21 @@
         [loader setMethod:RKRequestMethodPOST];
     }];
     
+}
+
+/**
+ * toggles the "remember me?" checkbox when tapped
+ */
+- (IBAction)rememberMePressed {
+    self.checkboxIsChecked = !self.checkboxIsChecked;
+    [self.rememberMeCheckbox setSelected:self.checkboxIsChecked];
+}
+
+/**
+ * sends login when "sign in" button pressed
+ */
+- (IBAction)signInButtonPressed {
+    [self sendRequest];
 }
 
 #pragma mark RKObjectLoaderDelegate methods
