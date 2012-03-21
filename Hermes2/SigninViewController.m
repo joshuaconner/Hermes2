@@ -40,7 +40,11 @@
  */
 - (void)viewDidLoad
 {
-   self.checkboxIsChecked = YES;
+    self.checkboxIsChecked = YES;
+    self.emailTextField.delegate = self;
+    self.passwordTextField.delegate = self;
+    
+    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *email = [defaults objectForKey:@"email"];
     NSString *password = [SFHFKeychainUtils getPasswordForUsername:email 
@@ -71,10 +75,12 @@
  * send request and end editing if exiting the passwordTextField
  */
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    NSLog(@"textfield should return");
     if (textField == passwordTextField){
         [self sendRequest];
         [self.view endEditing:YES];
+    } else {
+        [textField resignFirstResponder];
+        [passwordTextField becomeFirstResponder];
     }
     return YES;
 }
