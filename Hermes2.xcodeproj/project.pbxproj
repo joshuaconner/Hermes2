@@ -44,6 +44,8 @@
 		8631A7051519B4F5001907BC /* george2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8631A7001519B4F5001907BC /* george2.png */; };
 		8631A7061519B4F5001907BC /* george3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8631A7011519B4F5001907BC /* george3.png */; };
 		8631A7091519B50C001907BC /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8631A7081519B50C001907BC /* SFHFKeychainUtils.m */; };
+		8631A70C1519BB5D001907BC /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8631A70B1519BB5D001907BC /* MBProgressHUD.m */; };
+		8631A7131519BF60001907BC /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8631A70B1519BB5D001907BC /* MBProgressHUD.m */; };
 		86E7CEEE14FDE092002A0D81 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86E7CEED14FDE092002A0D81 /* CoreLocation.framework */; };
 		86E7CEF114FDE966002A0D81 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86E7CEF014FDE966002A0D81 /* MapKit.framework */; };
 		86FC493F14FD8CA90079C921 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86FC493E14FD8CA90079C921 /* UIKit.framework */; };
@@ -181,6 +183,8 @@
 		8631A7011519B4F5001907BC /* george3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = george3.png; sourceTree = "<group>"; };
 		8631A7071519B50C001907BC /* SFHFKeychainUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFHFKeychainUtils.h; sourceTree = "<group>"; };
 		8631A7081519B50C001907BC /* SFHFKeychainUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFHFKeychainUtils.m; sourceTree = "<group>"; };
+		8631A70A1519BB5D001907BC /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		8631A70B1519BB5D001907BC /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		86E7CEED14FDE092002A0D81 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		86E7CEF014FDE966002A0D81 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		86FC493A14FD8CA90079C921 /* Hermes2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hermes2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -260,6 +264,8 @@
 		3C38161B1501A17600145C2D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				8631A70A1519BB5D001907BC /* MBProgressHUD.h */,
+				8631A70B1519BB5D001907BC /* MBProgressHUD.m */,
 				8631A7071519B50C001907BC /* SFHFKeychainUtils.h */,
 				8631A7081519B50C001907BC /* SFHFKeychainUtils.m */,
 				3C1C981B150330E5008DA392 /* PullToRefreshView.h */,
@@ -658,6 +664,7 @@
 				3CC9B6C315033FCF00661806 /* Transaction.m in Sources */,
 				3CC9B6C615033FF400661806 /* User.m in Sources */,
 				8631A7091519B50C001907BC /* SFHFKeychainUtils.m in Sources */,
+				8631A7131519BF60001907BC /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -667,6 +674,7 @@
 			files = (
 				86FC496D14FD8CA90079C921 /* Hermes2Tests.m in Sources */,
 				3C1C981D150330E5008DA392 /* PullToRefreshView.m in Sources */,
+				8631A70C1519BB5D001907BC /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,9 +10,11 @@
 #import "HermesViewController.h"
 #import "User.h"
 #import "SFHFKeychainUtils.h"
+#import "MBProgressHUD.h"
 
-@interface SigninViewController ()
+@interface SigninViewController () <MBProgressHUDDelegate> 
 @property (nonatomic) BOOL checkboxIsChecked;
+@property (strong, nonatomic) MBProgressHUD *HUD;
 @end
 
 @implementation SigninViewController
@@ -20,6 +22,15 @@
 @synthesize passwordTextField;
 @synthesize rememberMeCheckbox = _rememberMeCheckbox;
 @synthesize checkboxIsChecked = _checkboxIsChecked;
+@synthesize HUD = _HUD;
+
+- (MBProgressHUD *)HUD {
+    if (!_HUD) {
+        _HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+    }
+    return _HUD;
+}
+
 
 #define SERVICE_NAME @"HermesSimpleMoney"
 
@@ -77,19 +88,28 @@
 
 
 - (void)sendRequest {
+    //pop up "signing in..." modal
+    [self showWithGradient];
+    
     //save username and password if needed
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if (self.checkboxIsChecked) {
         //save values to keychain
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         [defaults setObject:self.emailTextField.text forKey:@"email"];
-        [defaults synchronize];
         
         [SFHFKeychainUtils storeUsername:self.emailTextField.text
                              andPassword:self.passwordTextField.text
                           forServiceName:SERVICE_NAME 
                           updateExisting:YES 
                                    error:nil];
+    } else {
+        [defaults setObject:nil forKey:@"email"];
+        [SFHFKeychainUtils deleteItemForUsername:self.emailTextField.text 
+                                  andServiceName:SERVICE_NAME
+                                           error:nil];
+
     }
+    [defaults synchronize];
     
     RKObjectManager *objectManager = [RKObjectManager sharedManager];
     [objectManager loadObjectsAtResourcePath:@"/users/sign_in" delegate:self block:^(RKObjectLoader* loader) {
@@ -145,11 +165,13 @@
 - (void)request:(RKRequest *)request didFailLoadWithError:(NSError *)error {
     RKLogError(@"Load of RKRequest %@ failed with error: %@", request, error);
     NSLog(@"RK error");
+    [self.HUD hide:YES];
 }
 
 - (void)request:(RKRequest *)request didLoadResponse:(RKResponse *)response {
     RKLogCritical(@"Loading of RKRequest %@ completed with status code %d. Response body: %@", request, response.statusCode, [response bodyAsString]);
     if (response.statusCode == 201) {
+        [self.HUD hide:YES];
         HermesViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"Main Menu"];
         [self.navigationController pushViewController:controller animated:YES];
         
@@ -211,6 +233,28 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+}
+
+#pragma mark MBProgressHUD methods
+
+- (IBAction)showWithGradient {
+	[self.navigationController.view addSubview:self.HUD];
+	
+	self.HUD.dimBackground = YES;
+	
+	// Regiser for HUD callbacks so we can remove it from the window at the right time
+    self.HUD.delegate = self;
+    
+    self.HUD.labelText = @"Signing in...";
+	
+    // Show the HUD while the provided method executes in a new thread
+    [self.HUD show:YES];
+}
+
+- (void)hudWasHidden:(MBProgressHUD *)hud {
+    // Remove HUD from screen when the HUD was hidded
+    [self.HUD removeFromSuperview];
+	self.HUD = nil;
 }
 
 @end
