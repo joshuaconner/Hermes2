@@ -227,6 +227,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8611AA8814FE0959009184D7 /* CoreMedia.framework in Frameworks */,
 				8611AA2614FDFE3E009184D7 /* libxml2.dylib in Frameworks */,
 				8611AA8B14FE098B009184D7 /* QuartzCore.framework in Frameworks */,
 				8611AA2214FDFE2A009184D7 /* SystemConfiguration.framework in Frameworks */,
@@ -237,7 +238,6 @@
 				3C742C621501F46C0022F37B /* libRestKit.a in Frameworks */,
 				8611AA8D14FE0994009184D7 /* libiconv.dylib in Frameworks */,
 				8611AA8A14FE0982009184D7 /* CoreVideo.framework in Frameworks */,
-				8611AA8814FE0959009184D7 /* CoreMedia.framework in Frameworks */,
 				8611AA8614FE08FE009184D7 /* AVFoundation.framework in Frameworks */,
 				86E7CEF114FDE966002A0D81 /* MapKit.framework in Frameworks */,
 				86E7CEEE14FDE092002A0D81 /* CoreLocation.framework in Frameworks */,

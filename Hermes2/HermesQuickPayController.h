@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface HermesQuickPayController : UIViewController
-
+@property (weak, nonatomic) IBOutlet UILabel *label;
+@property (weak, nonatomic) IBOutlet UIImageView *image;
+@property (strong, nonatomic) NSString *resultText;
+@property (strong, nonatomic) UIImage *resultImage;
 @end

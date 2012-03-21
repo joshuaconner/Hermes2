@@ -8,11 +8,16 @@
 
 #import "HermesQuickPayController.h"
 
+
 @interface HermesQuickPayController ()
 
 @end
 
 @implementation HermesQuickPayController
+@synthesize label;
+@synthesize image;
+@synthesize resultText = _resultText;
+@synthesize resultImage = _resultImage;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -23,15 +28,17 @@
     return self;
 }
 
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    self.label.text = self.resultText;
+    self.image.image = self.resultImage;
 }
 
 - (void)viewDidUnload
 {
+    [self setLabel:nil];
+    [self setImage:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }

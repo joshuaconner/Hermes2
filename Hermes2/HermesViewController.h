@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface HermesViewController : UIViewController
+- (IBAction)quickPayButtonPressed;
 
 @end
